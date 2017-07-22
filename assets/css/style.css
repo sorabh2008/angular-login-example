@@ -1,0 +1,73 @@
+.navbar-default{
+	background-color:#1D1D1D;
+	border-color:#FFFFFF;
+	color:#FFFFFF;
+}
+
+.navbar-default .navbar-brand{
+	color:#FFFFFF;
+}
+
+.navbar-default .navbar-brand > img{
+	color:#FFFFFF;
+	height:30px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{
+	color:#1BBC9C;
+	background-color:transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#FFFFFF;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color:#FFFFFF;
+	background-color:#1BBC9C;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color:#1BBC9C;
+	background-color:transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+	background-color:#919191;
+	color:#FFFFFF;
+}
+
+#wrapper{
+    background-color:#F1F1F1;
+}
+
+#topbar-wrapper{
+    width:100%;
+    position:absolute;
+}
+
+#content-wrapper{
+    width:100%;
+    position:absolute;
+    margin-top:50px;
+    padding:15px;
+}
+
+#questionContentWrapper{
+    height:300px;
+    overflow: scroll;
+    border: 5px solid black;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSR - Admin</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="CSR - Admin">
+
+    <!-- Load CSS (3.3.6 - css) -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css">
+    <!-- Load local stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body ng-app="csrApp" ng-controller="ApplicationController">
+<div id="wrapper">
+    <div id="topbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/home">CSR Admin</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/help">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="./assets/libs/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/libs/bootstrap.min.js"></script>
+<!-- Load Angular (v1.5.5) -->
+<script type="text/javascript" src="./assets/libs/angular.min.js"></script>
+<script type="text/javascript" src="./assets/libs/angular-route.min.js"></script>
+
+<script type="text/javascript" src="./app.module.js"></script>
+<script type="text/javascript" src="./app.route.js"></script>
+
+<!-- Load all Services -->
+<script type="text/javascript" src="./components/login/loginService.js"></script>
+<script type="text/javascript" src="./components/admin/adminService.js"></script>
+<script type="text/javascript" src="./components/register/registrationService.js"></script>
+<!-- Load all Controllers -->
+<script type="text/javascript" src="./components/login/loginController.js"></script>
+<script type="text/javascript" src="./components/register/registrationController.js"></script>
+<script type="text/javascript" src="./components/admin/adminController.js"></script>
+</body>
+</html>

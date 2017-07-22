@@ -1,0 +1,98 @@
+<div class="row page-header">
+    <div class="col-sm-12 col-md-12 text-center"><h1>Registration Form</h1></div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-12 text-center well">
+        <form name="registrationForm" role="form">
+            <div class="form-group">
+                <label for="inputProject">Select Project:</label>
+                <select class="form-control" id="inputProject" ng-model="user.project" required="please select a project" autofocus>
+                    <option value="biogas">Biogas</option>
+                    <option value="cook stove">Cook stove</option>
+                    <option value="water purification">Water purification</option>
+                    <option value="forestry">Forestry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="sr-only">Name</label>
+                <input type="text" id="inputName" class="form-control" ng-model="user.name" placeholder="Name" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="inputRole">Select Role:</label>
+                <select class="form-control" id="inputRole" ng-model="user.role" required>
+                    <option>admin</option>
+                    <option>organization</option>
+                    <option>coordinator</option>
+                </select>
+            </div>
+            <div class="form-group" ng-switch on="user.role">
+                <div ng-switch-when="organization">
+                    <div class="form-group">
+                        <label for="inputOrgName" class="sr-only">Organization Name</label>
+                        <input type="text" id="inputOrgName" class="form-control" ng-model="user.organization.nameOfOrg" placeholder="Organization Name" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgAddress" class="sr-only">Organization Address</label>
+                        <input type="text" id="inputOrgAddress" class="form-control" ng-model="user.organization.address" placeholder="Organization Address" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgPhone" class="sr-only">Organization Phone</label>
+                        <input type="number" id="inputOrgPhone" class="form-control" ng-model="user.organization.phone" placeholder="Organization Phone" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgEmail" class="sr-only">E-Mail ID</label>
+                        <input type="email" id="inputOrgEmail" class="form-control" ng-model="user.organization.email" placeholder="E-Mail ID" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgWebAddr" class="sr-only">Web Address</label>
+                        <input type="text" id="inputOrgWebAddr" class="form-control" ng-model="user.organization.webAddress" placeholder="Web Address" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgPOC" class="sr-only">Point of Contact</label>
+                        <input type="text" id="inputOrgPOC" class="form-control" ng-model="user.organization.pointOfContact.name" placeholder="Point of Contact" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgPOCMob" class="sr-only">Mobile</label>
+                        <input type="number" id="inputOrgPOCMob" class="form-control" ng-model="user.organization.pointOfContact.mobile" placeholder="Mobile" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgPOCEmail" class="sr-only">E-Mail ID</label>
+                        <input type="email" id="inputOrgPOCEmail" class="form-control" ng-model="user.organization.pointOfContact.email" placeholder="E-Mail ID" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOrgCIN" class="sr-only">CIN</label>
+                        <input type="text" id="inputOrgCIN" class="form-control" ng-model="user.organization.cin" placeholder="CIN" required autofocus>
+                    </div>
+                </div>
+                <div ng-switch-when="coordinator">
+                    <div class="form-group">
+                        <label for="inputCorName" class="sr-only">Coordinator Name</label>
+                        <input type="text" id="inputCorName" class="form-control" ng-model="user.coordinator.name" placeholder="Coordinator Name" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCorGender" class="sr-only">Gender</label>
+                        <input type="text" id="inputCorGender" class="form-control" ng-model="user.coordinator.gender" placeholder="Gender" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCorAge" class="sr-only">Age</label>
+                        <input type="number" id="inputCorAge" class="form-control" ng-model="user.coordinator.age" placeholder="Age" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCorEmail" class="sr-only">E-Mail ID</label>
+                        <input type="email" id="inputCorEmail" class="form-control" ng-model="user.coordinator.email" placeholder="E-Mail ID" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCorMobile" class="sr-only">Mobile</label>
+                        <input type="number" id="inputCorMobile" class="form-control" ng-model="user.coordinator.mobile" placeholder="Mobile" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCorOTP" class="sr-only">OTP</label>
+                        <input type="text" id="inputCorOTP" class="form-control" ng-model="user.coordinator.otp" placeholder="OTP" required autofocus>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="registrationForm.$valid && register(user)">Register</button>
+        </form>
+        {{user.project}}
+    </div>
+</div>
